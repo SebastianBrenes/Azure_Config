@@ -72,7 +72,7 @@ This guide walks you through setting up and managing an on-premises Active Direc
 
 ### Step 3: Install Active Directory
 - Log in to `DC-1` and install Active Directory Domain Services.
-<img src="" alt="">
+<img src="https://i.imgur.com/m8ccDnF.png" alt="Install AD Domain Services">
 
 - Promote the server to a domain controller and create a new forest (e.g., `myadproject.com`).
 <img src="" alt="">
