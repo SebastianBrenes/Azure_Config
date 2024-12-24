@@ -51,10 +51,13 @@ This guide walks you through setting up and managing an on-premises Active Direc
 
 ### Step 1: Create and Configure Azure Resources
 - Set up a domain controller VM named `DC-1` with Windows Server 2022.
-<img src="https://i.imgur.com/mcgbxE9.png" alt=""/>
+<img src="https://i.imgur.com/mcgbxE9.png" alt="Create DC-1 VM"/>
 
 - Create a client VM named `User-1` using the same resource group and Virtual Network.
+<img src="https://i.imgur.com/dhAuo5O.png" alt="Create User-1 VM">
+
 - Assign a static private IP address to the domain controller (`DC-1`) and verify connectivity using Azure's Network Watcher.
+<img src="https://i.imgur.com/cOxyS0w.png" alt="Assing static private IP to DC-1">
 
 ### Step 2: Ensure Connectivity
 - From `User-1`, use `ping -t` to check the connection to `DC-1`.
