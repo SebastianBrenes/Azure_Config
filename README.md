@@ -74,8 +74,8 @@ This guide walks you through setting up and managing an on-premises Active Direc
 - Log in to `DC-1` and install Active Directory Domain Services.
 <img src="https://i.imgur.com/m8ccDnF.png" alt="Install AD Domain Services">
 
-- Promote the server to a domain controller and create a new forest (e.g., `myadproject.com`).
-<img src="" alt="">
+- Promote the server to a domain controller and create a new forest (e.g. `adlab.com`).
+<img src="https://i.imgur.com/jkGnPP2.png" alt="Promote the server">
 
 - Restart the server and log in using the domain credentials.
 <img src="" alt="">
