@@ -78,20 +78,21 @@ This guide walks you through setting up and managing an on-premises Active Direc
 <img src="https://i.imgur.com/jkGnPP2.png" alt="Promote the server">
 
 - Restart the server and log in using the domain credentials.
-<img src="" alt="">
 
 ### Step 4: Manage Active Directory Users and Computers
 - Open Active Directory Users and Computers (ADUC).
-<img src="" alt="">
+<img src="https://i.imgur.com/H5Dm99M.png" alt="Open ADUC">
 
 - Create OUs for employees (`_EMPLOYEES`) and admins (`_ADMINS`).
-<img src="" alt="">
+<img src="https://i.imgur.com/L2xMPmY.png?1" alt="Create OU option">
+<img src="https://i.imgur.com/yeOWl74.png" alt="Create _EMPLOYEES OU">
 
-- Add users (e.g., `jane_admin`) and assign them to the appropriate security groups.
-<img src="" alt="">
+- Add users (e.g., `rreynolds_admin`) and assign them to the appropriate security groups.
+<img src="https://i.imgur.com/Rrl87np.png" alt="Create new user">
+<img src="https://i.imgur.com/Qe0ba9j.png" alt="Assign user to the Domain Admins group">
 
-- Join `User-1` to the domain and move it into the `_USERS` OU.
-<img src="" alt="">
+- Join to the `User-1` VM and using the `rreynolds_admin` account.
+<img src="https://i.imgur.com/deMxtZo.png" alt="Join User-1 through RDP">
 
 ### Step 5: Set Up Remote Desktop for Users
 - On `User-1`, allow "Domain Users" to access Remote Desktop.
