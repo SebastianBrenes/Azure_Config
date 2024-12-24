@@ -51,34 +51,58 @@ This guide walks you through setting up and managing an on-premises Active Direc
 
 ### Step 1: Create and Configure Azure Resources
 - Set up a domain controller VM named `DC-1` with Windows Server 2022.
-<img src="https://i.imgur.com/mcgbxE9.png" alt="Create DC-1 VM"/>
+<img src="https://i.imgur.com/2Wn7spd.png" alt="Create DC-1 VM"/>
 
 - Create a client VM named `User-1` using the same resource group and Virtual Network.
 <img src="https://i.imgur.com/dhAuo5O.png" alt="Create User-1 VM">
 
 - Assign a static private IP address to the domain controller (`DC-1`) and verify connectivity using Azure's Network Watcher.
-<img src="https://i.imgur.com/cOxyS0w.png" alt="Assing static private IP to DC-1">
+<img src="https://i.imgur.com/SSmlDvD.png" alt="Assing static private IP to DC-1">
+<img src="https://i.imgur.com/rlioW0G.png" alt="Using the Azure's Network Watcher">
 
 ### Step 2: Ensure Connectivity
 - From `User-1`, use `ping -t` to check the connection to `DC-1`.
+<img src="https://i.imgur.com/piArwbf.png" alt="Trying to ping to the DC-1">
+
 - On `DC-1`, enable ICMPv4 traffic through the Windows Firewall.
+<img src="https://i.imgur.com/TXNIW9G.png" alt="Enable ICMPv4 on the DC-1 machine">
+
 - Verify successful pings from `User-1`.
+<img src="https://i.imgur.com/d1mSzRb.png" alt="Succesful Ping from User-1">
 
 ### Step 3: Install Active Directory
 - Log in to `DC-1` and install Active Directory Domain Services.
+<img src="" alt="">
+
 - Promote the server to a domain controller and create a new forest (e.g., `myadproject.com`).
+<img src="" alt="">
+
 - Restart the server and log in using the domain credentials.
+<img src="" alt="">
 
 ### Step 4: Manage Active Directory Users and Computers
 - Open Active Directory Users and Computers (ADUC).
+<img src="" alt="">
+
 - Create OUs for employees (`_EMPLOYEES`) and admins (`_ADMINS`).
+<img src="" alt="">
+
 - Add users (e.g., `jane_admin`) and assign them to the appropriate security groups.
+<img src="" alt="">
+
 - Join `User-1` to the domain and move it into the `_USERS` OU.
+<img src="" alt="">
 
 ### Step 5: Set Up Remote Desktop for Users
 - On `User-1`, allow "Domain Users" to access Remote Desktop.
+<img src="" alt="">
+
 - Test the connection with a non-administrative user account.
+<img src="" alt="">
 
 ### Step 6: Create and Test Additional User Accounts
 - Use a PowerShell script to bulk-create user accounts.
+<img src="" alt="">
+
 - Verify the accounts in ADUC and test logging into `User-1` with one of the new accounts.
+<img src="" alt="">
