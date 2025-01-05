@@ -92,18 +92,25 @@ This guide walks you through setting up and managing an on-premises Active Direc
 <img src="https://i.imgur.com/Qe0ba9j.png" alt="Assign user to the Domain Admins group">
 
 - Join to the `User-1` VM and using the `rreynolds_admin` account.
+We'll set up the dns of the server on the User-1 VM.
+<img src="https://i.imgur.com/T4wxMBk.png" alt="Set-up DNS on User-1">
 <img src="https://i.imgur.com/deMxtZo.png" alt="Join User-1 through RDP">
 
-### Step 5: Set Up Remote Desktop for Users
-- On `User-1`, allow "Domain Users" to access Remote Desktop.
-<img src="" alt="">
+- On `User-1`, we are going to allow "Domain Users" to access Remote Desktop.
+<img src="https://i.imgur.com/5DYC074.png" alt="Allow Domain Users to access RD">
 
-- Test the connection with a non-administrative user account.
-<img src="" alt="">
+### Step 5: Create and Test Additional User Accounts
+- Using a PowerShell script, we are going to bulk-create a 1000 user accounts.
+- We'll need to open Powershell ISE as administrator.
+<img src="https://i.imgur.com/aUSHKqi.png" alt="Open Powershell ISE">
 
-### Step 6: Create and Test Additional User Accounts
-- Use a PowerShell script to bulk-create user accounts.
-<img src="" alt="">
+- Create a new script and paste the content of this file: [https://github.com/Xinloiazn/configure-ad/blob/main/adscript.ps1](https://github.com/SebastianBrenes/Azure_Config/blob/main/adscript.ps1)
+<img src="https://i.imgur.com/t9xmQly.png" alt="Paste new script">
+
+- Run the script and see the new users you're creating.
+<img src="https://i.imgur.com/g8xmZnH.png" alt="Run script">
+
 
 - Verify the accounts in ADUC and test logging into `User-1` with one of the new accounts.
-<img src="" alt="">
+<img src="https://i.imgur.com/8pGMLco.png" alt="Verify the accounts created correctly">
+<img src="https://i.imgur.com/SHWyTxY.png" alt="Logging into one of those accounts">
