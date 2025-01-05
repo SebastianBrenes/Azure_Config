@@ -114,3 +114,5 @@ We'll set up the dns of the server on the User-1 VM.
 - Verify the accounts in ADUC and test logging into `User-1` with one of the new accounts.
 <img src="https://i.imgur.com/8pGMLco.png" alt="Verify the accounts created correctly">
 <img src="https://i.imgur.com/SHWyTxY.png" alt="Logging into one of those accounts">
+
+- That's all from this lab, now we need to make sure to clean everything from the Azure Enviroment so we don't have any additional charges. 
